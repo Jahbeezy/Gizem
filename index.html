@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PASSGEN 5000</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>PASSGEN 5000</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div  class="card-footer">
+          <div class="boxes">
+            <div class="char">
+              <p>Character Amount
+                <input type="range" min="8" max="128" value="26" id="charRange"> 
+                <input type="number" min="8" max="128" value="26" id="charNumber">
+              </p>
+            </div>
+            
+              <p>Add Capitals<input type="checkbox" id="caps"> </p>
+              <p>Add Lower Case<input type="checkbox" id="lows"> </p>
+              <p>Add Symbols<input type="checkbox" id="symbols"> </p>
+              <p>Add Numbers<input type="checkbox" id="numbers"> </p>
+            
+          
+          <div>
+            <button id="generate" class="btn">Generate Password</button>
+          </div>
+          <div>
+            <button id="copy" class="cop">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
