@@ -60,7 +60,12 @@ header {
 }
 
 .boxes {
- display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 h2 {
