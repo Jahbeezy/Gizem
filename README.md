@@ -15,7 +15,7 @@ and select atleast one of the parameters.
 * Slide the Character Amount to desired number
 * Use Copy button to copy the password to your clipboard
 
-<img src="./images/cap.png">
+<img src="./images/passgen.png">
 
  
 
