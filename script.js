@@ -16,6 +16,7 @@ var lowerCodes = minMax(97,122);
 var numbCodes = minMax(48,57);
 var symbsCodes = minMax(33, 47).concat(minMax(58, 64)).concat(minMax(91, 96)).concat(minMax(123, 126));
 var none = []
+
 //syncs the value of the slider and range number together
 charNumber.addEventListener("input", syncCharacterAmount);
 charRange.addEventListener("input", syncCharacterAmount);
@@ -30,7 +31,10 @@ function writePassword(){
   var numbies = numbers.checked;
   var symbols = symbs.checked;
   var password = generatePassword(charAmount, upper, lowes, numbies, symbols);
+
   passwordText.innerText = password;
+  
+
 }
 
 //generatePassword function declares var charCode = lowerCodes making the default lowercase
@@ -39,6 +43,7 @@ function writePassword(){
 //Math randomly cycles through which type is selected
 //push adds the new code into the empty array
 //return the passwordFinal array as a string
+//if nothing is selected an alert is triggered
 function generatePassword(charAmount, upper, lowes, numbies, symbols) {
     
     var charValue = none
@@ -46,8 +51,9 @@ function generatePassword(charAmount, upper, lowes, numbies, symbols) {
     if(lowes) charValue = charValue.concat(lowerCodes)
     if(numbies) charValue = charValue.concat(numbCodes)
     if(symbols) charValue = charValue.concat(symbsCodes)
-    
-    
+    if(charValue === none){
+      alert("PLEASE SELECT A PARAMETER")
+    }
     var passwordFinal = []
     
     for(var i = 0; i < charAmount; i++) {
